@@ -1,0 +1,214 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1600px
+);
+
+@font-face {
+    font-family: vazir;
+    src: url(/asset/font/Vazir-FD-WOL.woff) format(woff),
+         url(/asset/font/Vazir-FD-WOL.eot) format(eot),
+         url(/asset/font/Vazir-FD-WOL.ttf) format(ttf),
+         url(/asset/font/Vazir-FD-WOL.woff2) format(woff2);
+
+    font-weight: normal;
+
+}
+@font-face {
+    font-family: vazir;
+    src: url(/asset/font/Vazir-Bold-FD-WOL.woff) format(woff),
+         url(/asset/font/Vazir-Bold-FD-WOL.eot) format(eot),
+         url(/asset/font/Vazir-Bold-FD-WOL.ttf) format(ttf),
+         url(/asset/font/Vazir-Bold-FD-WOL.woff2) format(woff2);
+
+    font-weight: bold;
+
+}
+@font-face {
+    font-family: vazir;
+    src: url(/asset/font/Vazir-Light-FD-WOL.woff) format(woff),
+         url(/asset/font/Vazir-Light-FD-WOL.eot) format(eot),
+         url(/asset/font/Vazir-Light-FD-WOL.ttf) format(ttf),
+         url(/asset/font/Vazir-Light-FD-WOL.woff2) format(woff2);
+
+    font-weight: 400;
+
+}
+@font-face {
+    font-family: vazir;
+    src: url(/asset/font/Vazir-Medium-FD-WOL.woff) format(woff),
+         url(/asset/font/Vazir-Medium-FD-WOL.eot) format(eot),
+         url(/asset/font/Vazir-Medium-FD-WOL.ttf) format(ttf),
+         url(/asset/font/Vazir-Medium-FD-WOL.woff2) format(woff2);
+
+    font-weight: 500;
+
+}
+@font-face {
+    font-family: vazir;
+    src: url(/asset/font/Vazir-Thin-FD-WOL.woff) format(woff),
+         url(/asset/font/Vazir-Thin-FD-WOL.eot) format(eot),
+         url(/asset/font/Vazir-Thin-FD-WOL.ttf) format(ttf),
+         url(/asset/font/Vazir-Thin-FD-WOL.woff2) format(woff2);
+
+    font-weight: 300;
+
+}
+$textColor : #0c0c0c;
+$brandColor : #ef4056;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+*{
+    direction: rtl;
+    font-family: vazir;
+    font-size: .9rem !important;
+    font-weight: 500 !important;
+    color: $textColor;
+}
+body{
+    padding: 10px;
+}
+::before  {
+    line-height: inherit !important;
+    
+}
+button{
+    background-color: white !important;
+    border: 1px solid $gray-300 !important;
+    border-radius: 10px;
+}
+main{
+    width: 70%;
+    margin: auto;
+}
+span.divider {
+    width: 1px;
+    background-color: $gray-300 !important;
+    height: 30px !important;
+    margin: 0 15px;
+}
+a{
+    color: $textColor;
+    font-weight: bold ;
+    text-decoration: none;
+}
+a:hover{
+    color: $brandColor !important;
+}
+.icon{
+    font-size: 15px !important;
+    margin: 0 5px;
+    padding-bottom:5px !important;
+
+}
+
+.border-bottom-effect:after {
+    display:block;
+    content: '';
+    border-bottom: solid 2px $brandColor !important;  
+    transform: scaleX(0) !important;  
+    transition: transform 250ms ease-in-out;
+    padding-bottom:5px ;
+  }
+  .border-bottom-effect:after{  transform-origin:   0% 50%; }
+
+  .border-bottom-effect:hover:after{ transform: scaleX(1) !important; transform-origin: 100% 50%; }
+
+  .story-box-item-img{
+    cursor: pointer;
+  }
+.story-box-item-img img{
+    border: double 2px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  .swiper-button-next::after,.swiper-button-prev::after {
+    border: 1px solid $gray-300;
+    font-size: 25px !important;
+    color: $gray-500;
+    background: white;
+    border-radius: 38px;
+    text-align: center;
+    padding: 4px 11px;
+}
+//creat mega menu
+
+nav.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.navbar {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.menu-container {
+    position: absolute;
+    background: white;
+    height: 667px;
+    width: auto;
+    display: none !important;
+    z-index: 10;
+    overflow: auto;
+}
+
+
+.menu-container .left-menu {
+    width: 200px;
+    overflow: auto !important;
+}
+.left-menu ul{
+    width: 100% !important;
+}
+.left-menu ul li{
+    width: 100% !important;
+}
+.left-menu ul li a{
+    background-color: $gray-100;
+    width: 100% !important;
+    display: block;
+    padding: 15px;
+}
+.left-menu ul li a:hover{
+    background-color: white;
+    
+}
+.right-menu {
+    flex: 1;
+    padding: 20px;
+    z-index: 10;
+}
+  
+  .menu-content {
+    display: none;
+  }
+  .menu-content.active {
+    display: flex !important;
+    
+  }
+  .menu-content.active ul{
+    display: flex !important;
+    flex-direction: row;
+  }
+  .menu-content ul li{
+    width: 150px !important;
+  }
+
+
+/* نمایش منو با هاور */
+.menu-item:hover > .menu-container {
+  display: flex !important;
+  align-items: start !important;
+}
