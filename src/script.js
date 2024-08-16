@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.story-box', {
     slidesPerView : 10.5,
     // Optional parameters
     // If we need pagination
@@ -26,3 +26,27 @@ const swiper = new Swiper('.swiper', {
     });
   });
   
+   swiper = new Swiper('.slide-show', {
+    // Optional parameters
+
+    autoplay : true ,
+    autoplay :{
+      pauseOnMouseEnter : true ,
+    },
+    delay : 2000,
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets : true
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
