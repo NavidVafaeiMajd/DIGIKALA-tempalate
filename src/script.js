@@ -26,7 +26,7 @@ const swiper = new Swiper('.story-box', {
     });
   });
   
-   swiper = new Swiper('.slide-show', {
+   const swiperSlideShow = new Swiper('.slide-show', {
     // Optional parameters
 
     autoplay : true ,
@@ -43,6 +43,16 @@ const swiper = new Swiper('.story-box', {
       dynamicBullets : true
     },
 
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+
+   const swiperAmazingOrder = new Swiper('.amazing-order', {
+    slidesPerView : 10.5,  
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',

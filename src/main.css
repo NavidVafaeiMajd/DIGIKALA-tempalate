@@ -12175,3 +12175,7 @@ nav.navbar {
   transform: scale(1.3);
   color: white !important;
 }
+
+.amazing-order {
+  height: 400px;
+}
