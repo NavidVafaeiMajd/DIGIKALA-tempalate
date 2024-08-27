@@ -11992,7 +11992,7 @@ textarea.form-control-lg {
 }
 * {
   direction: rtl;
-  font-family: vazir;
+  font-family: vazir, tahoma;
   font-size: 0.9rem !important;
   font-weight: 500 !important;
   color: #0c0c0c;
@@ -12186,9 +12186,6 @@ nav.navbar {
 }
 
 .amazing-order div div {
-  padding: 0 10px !important;
-  display: flex;
-  justify-content: center;
   margin: 0 2px;
 }
 
