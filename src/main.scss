@@ -239,3 +239,26 @@ nav.navbar {
 .amazing-order{
     height: 400px;
 }
+.countdown-timer div {
+    background-color: white;
+    color: black !important;
+}
+.amazing-order div div {
+    padding: 0 10px !important;
+    display: flex;
+    justify-content: center;
+    margin:  0 2px;
+}
+.countdown-timer div {
+    font-size: 15px !important;
+    width: 29px !important;
+}
+.amazing-order >div> div:not(:first-child){
+    background-color: white !important;
+}
+.amazing-order >div> div:nth-child(2){
+    border-radius: 0 5px 5px 0;
+}
+.amazing-order >div> div:last-child{
+    border-radius: 5px 0px 0px 5px;
+}
