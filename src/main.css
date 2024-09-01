@@ -12205,3 +12205,14 @@ nav.navbar {
 .amazing-order > div > div:last-child {
   border-radius: 5px 0px 0px 5px;
 }
+
+@media screen and (max-width: 1300px) {
+  .main-width {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-width {
+    width: 95% !important;
+  }
+}
