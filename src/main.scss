@@ -63,7 +63,7 @@ $container-max-widths: (
 $textColor : #0c0c0c;
 $brandColor : #ef4056;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap"; 
 
 // Then add additional custom code here
 *{
@@ -268,4 +268,7 @@ nav.navbar {
     .main-width{
         width: 95% !important; 
     }
+}
+.col {
+    padding: 0;
 }

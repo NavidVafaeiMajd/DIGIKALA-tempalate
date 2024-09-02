@@ -12216,3 +12216,6 @@ nav.navbar {
     width: 95% !important;
   }
 }
+.col {
+  padding: 0;
+}
